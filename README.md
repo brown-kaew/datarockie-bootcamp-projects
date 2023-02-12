@@ -26,6 +26,10 @@ We learn 10 sprints during 4 month program.
     - [titanic-survival.Rmd](essential-statistics/titanic-survival.Rmd) source
 - Intro to `Classical` Machine Learning
 - Intro to Python
+  - [Pao Ying Chub game](https://datalore.jetbrains.com/view/notebook/eWffNaN9SB88BfN8AqgXDj) Pao Ying Chub game with bot in `python`
+    - [pao-ying-chub.ipynb](python/pao-ying-chub.ipynb) source
+  - [ATM](https://datalore.jetbrains.com/view/notebook/oZNNGtHNsp4vcBQ0b7ITID) Object Oriented Programming using ATM senario with `python`
+    - [pao-ying-chub.ipynb](python/atm.ipynb) source
 - Essential Python for Data Analyst
 - Dashboard
 
