@@ -10,8 +10,11 @@ We learn 10 sprints during 4 month program.
   - [ID Card Parser](https://docs.google.com/spreadsheets/d/1V8t3j6Nt2un45pFngGTcg_5G0NgducTSqyT-y1gDhEo/edit#gid=2014543270) using Regular Expression to extract data
 - SQL Database
   - [Restarants database](https://replit.com/@KaewT/SQLhomeworkbatch6#main.sql) replit run
-  - [Restarants database](sql/restaurants.sql) source
+    - [restaurants.sql](sql/restaurants.sql) source
 - R Programming
+  - [Chatbot pizza and Pao Ying Chub game](https://replit.com/@KaewT/Batch06ChatbotPizzaAndPaoYingChub#main.r) replit run
+    - [pizza.r](r/pizza.r) source
+    - [game.r](r/game.r) source
 - Data Transformation
 - Data Visualization
 - Statistics
