@@ -1,0 +1,125 @@
+---
+title: "Data Visualization Assignment"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+Prices of over 50,000 round cut diamonds
+
+## Load Library
+
+```{r}
+library(tidyverse)
+library(patchwork)
+```
+
+## Load dataset
+
+```{r}
+data(diamonds)
+```
+
+### View dataset
+
+```{r}
+head(diamonds)
+```
+
+### Glimpse Dataset
+
+```{r}
+glimpse(diamonds)
+```
+
+### Summarize dataset
+
+```{r}
+summary(diamonds)
+```
+
+## Sample data
+
+```{r}
+set.seed(33)
+sample_diamonds <- sample_n(diamonds, 1000)
+```
+
+## Chart 1: Most popular Color [D (best) to J (worst)]
+
+```{r}
+diamonds %>%
+  ggplot(mapping = aes(x = color, fill = color)) +
+  geom_bar() +
+  labs(
+    title = "Most popular Color [D (best) to J (worst)]",
+    x = "Color",
+    caption = " Source: ggplot package"
+  ) +
+  theme_minimal() +
+  scale_fill_brewer(type = "qual", palette = "Accent")
+```
+
+## Chart 2: Proportion of cut by color [D (best) to J (worst)]
+
+```{r}
+sample_diamonds %>%
+  ggplot(mapping = aes(cut, fill = color)) +
+  geom_bar(position = "fill") +
+  labs(
+    title = "Proportion of cut by color [D (best) to J (worst)]",
+    x = "Cut",
+    caption = " Source: ggplot package"
+  ) +
+  theme_minimal() +
+  scale_fill_brewer(type = "qual", palette = "Accent")
+```
+
+## Chart 3: Relationship between Carat and Price (USD)
+
+```{r}
+sample_diamonds %>%
+  ggplot(mapping = aes(carat, price, color = cut)) +
+  geom_point(size = 3, alpha = .7) +
+  geom_smooth(method = "lm", color = "salmon", se = F) +
+  labs(
+    title = "Relationship between Carat and Price (USD)",
+    x = "Carat",
+    y = "Price (USD)",
+    caption = " Source: ggplot package"
+  ) +
+  theme_minimal() +
+  scale_color_brewer(type = "qual", palette = "Dark2")
+```
+
+## Chart 4: Bloxplot of Price (USD) by Cut
+
+```{r}
+sample_diamonds %>%
+  ggplot(mapping = aes(cut, price, color = cut)) +
+  geom_boxplot(alpha = .7) +
+  labs(
+    title = "Bloxplot of Price (USD) by Cut",
+    x = "Cut",
+    y = "Price (USD)",
+    caption = " Source: ggplot package"
+  ) +
+  theme_minimal() +
+  scale_color_brewer(type = "qual", palette = "Dark2")
+```
+
+## Chart 5: Violin plot of Carat by Cut
+
+```{r}
+sample_diamonds %>%
+  ggplot(mapping = aes(cut, carat, color = cut)) +
+  geom_violin() +
+  geom_jitter(width = .3, alpha = .2) +
+  labs(
+    title = "Violin plot of Carat by Cut",
+    x = "Cut",
+    y = "Carat",
+    caption = " Source: ggplot package"
+  ) +
+  theme_minimal() +
+  scale_color_brewer(type = "qual", palette = "Dark2")
+```
