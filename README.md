@@ -16,6 +16,8 @@ We learn 10 sprints during 4 month program.
     - [pizza.r](r/pizza.r) source
     - [game.r](r/game.r) source
 - Data Transformation
+  - [NYC Flights Analysis](https://datalore.jetbrains.com/view/notebook/L3LRtfSLFgXlupOhmupciF) datalore report
+    - [nycflights13-analysis.ipynb](data-transformation/nycflights13-analysis.ipynb) source
 - Data Visualization
 - Statistics
 - Intro to `Classical` Machine Learning
