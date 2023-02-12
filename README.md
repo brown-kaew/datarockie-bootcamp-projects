@@ -20,7 +20,7 @@ We learn 10 sprints during 4 month program.
     - [nycflights13-analysis.ipynb](data-transformation/nycflights13-analysis.ipynb) source
 - Data Visualization
   - [Dimonds Report](data-visualization/data-viz-assignment.pdf) A Dimonds report using the ggplot2 package in R
-    - [Dimonds Report](data-visualization/data-viz-assignment.Rmd) source
+    - [data-viz-assignment.Rmd](data-visualization/data-viz-assignment.Rmd) source
 - Statistics
 - Intro to `Classical` Machine Learning
 - Intro to Python
