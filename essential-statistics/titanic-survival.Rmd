@@ -1,0 +1,130 @@
+---
+title: 'Essential Statistics : Titanic homework'
+author: "Kaew Tibkham"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+## Load library
+
+```{r}
+library(tidyverse)
+library(titanic)
+```
+
+## Load dataset
+
+```{r}
+data(titanic_train)
+head(titanic_train)
+```
+
+### Glimpse Dataset
+
+```{r}
+glimpse(titanic_train)
+```
+
+## Preps data
+
+### Drop missing value
+
+```{r}
+titanic_train <- na.omit(titanic_train)
+```
+
+### Transform data
+
+male = 0 female = 1
+
+```{r}
+titanic_train$Sex <- if_else(titanic_train$Sex == "male", 0, 1)
+```
+
+## Split data
+
+```{r}
+set.seed(33)
+n <- nrow(titanic_train)
+id <- sample(1:n, size = n*0.7)
+train_data <- titanic_train[id,]
+test_data <- titanic_train[-id,]
+```
+
+### Glimpse Dataset
+
+```{r}
+glimpse(titanic_train)
+```
+
+## Train model
+
+```{r}
+model <- glm(Survived ~ Pclass + Age + Sex, data = train_data, family = "binomial")
+summary(model)
+
+train_data$prob_Survived <- predict(model, type="response") ## probability
+train_data$pred_Survived <- ifelse(train_data$prob_Survived >= 0.5, 1, 0)
+```
+
+## Test
+
+```{r}
+test_data$prob_Survived <- predict(model, newdata = test_data, type="response") ## probability
+test_data$pred_Survived <- if_else(test_data$prob_Survived >=0.5, 1, 0)
+```
+
+## Model evaluation
+
+### Confusion metric of train model
+
+```{r}
+train_con_metrix <- table(train_data$pred_Survived, train_data$Survived, dnn=c("predicted", "actual"))
+
+train_accuracy <- (train_con_metrix[1, 1] + train_con_metrix[2, 2]) / sum(train_con_metrix)
+train_precision <- train_con_metrix[2, 2] / (train_con_metrix[2, 1] + train_con_metrix[2, 2])
+train_recall <- train_con_metrix[2, 2] / (train_con_metrix[1, 2] + train_con_metrix[2, 2])
+train_f1_score <- 2 * train_precision*train_recall / (train_precision + train_recall)
+cat("train_accuracy:", train_accuracy)
+cat("\ntrain_precision:", train_precision)
+cat("\ntrain_recall:", train_recall)
+cat("\ntrain_f1_score:", train_f1_score)
+cat("\n")
+```
+
+### Confusion metric of test model
+
+```{r}
+test_con_metrix <- table(test_data$pred_Survived, test_data$Survived, dnn=c("predicted", "actual"))
+
+test_accuracy <- (test_con_metrix[1, 1] + test_con_metrix[2, 2]) / sum(test_con_metrix)
+test_precision <- test_con_metrix[2, 2] / (test_con_metrix[2, 1] + test_con_metrix[2, 2])
+test_recall <- test_con_metrix[2, 2] / (test_con_metrix[1, 2] + test_con_metrix[2, 2])
+test_f1_score <- 2 * test_precision*test_recall / (test_precision + test_recall)
+cat("test_accuracy:", test_accuracy)
+cat("\ntest_precision:", test_precision)
+cat("\ntest_recall:", test_recall)
+cat("\ntest_f1_score:", test_f1_score)
+cat("\n")
+```
+
+### Summary
+
+Train and test have similar accuracy
+
+```{r}
+summary_model <- data.frame(
+  "Group" = c('Train', 'Test'),
+  "Accuracy" = c(train_accuracy, test_accuracy),
+  "Precision" = c(train_precision, test_precision),
+  "Recall" = c(train_recall, test_recall),
+  "F1 Score" = c(train_f1_score, test_f1_score)) %>%
+  pivot_longer(-Group ,
+    names_to = "Type",
+    values_to = "Percent")
+
+ggplot(summary_model, aes(Type, Percent, fill = Group)) +
+  geom_bar(stat='identity', position = 'dodge') +
+  coord_cartesian(ylim = c(0, 1)) +
+  theme_minimal()
+```
