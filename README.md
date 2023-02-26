@@ -13,29 +13,29 @@ We learn 10 sprints during 4 month program.
 ## SQL Database
 
 - [Restarants database](https://replit.com/@KaewT/SQLhomeworkbatch6#main.sql) A small restarants database contains 5 dimension tables and 1 fact table
-  - [restaurants.sql](sql/restaurants.sql) source
+  - source [restaurants.sql](sql/restaurants.sql)
 
 ## R Programming
 
 - [Chatbot pizza and Pao Ying Chub game](https://replit.com/@KaewT/Batch06ChatbotPizzaAndPaoYingChub#main.r) rule-based pizza chatbot and interactive mini game with bot in `R`
-  - [pizza.r](r/pizza.r) source
-  - [game.r](r/game.r) source
+  - source [pizza.r](r/pizza.r)
+  - source [game.r](r/game.r)
 
 ## Data Transformation
 
 - [NYC Flights Analysis](https://datalore.jetbrains.com/view/notebook/L3LRtfSLFgXlupOhmupciF) Analyze `nycflights13` dataset using `dplyr` package in `R`
-  - [nycflights13-analysis.ipynb](data-transformation/nycflights13-analysis.ipynb) source
+  - source [nycflights13-analysis.ipynb](data-transformation/nycflights13-analysis.ipynb)
 - ลองสร้าง PostgreSQL server ของตัวเองบน <https://www.elephantsql.com/> แล้ว write tables ขึ้นไปบน server
 
 ## Data Visualization
 
 - [Dimonds Report](data-visualization/data-viz-assignment.pdf) A Dimonds report using the `ggplot2` package in `R`
-  - [data-viz-assignment.Rmd](data-visualization/data-viz-assignment.Rmd) source
+  - source [data-viz-assignment.Rmd](data-visualization/data-viz-assignment.Rmd)
 
 ## Statistics
 
 - [Titanic Passenger Surival](essential-statistics/titanic-survival.pdf) Using Titanic dataset to predict passengers survival rate with logistic regression in `R`
-  - [titanic-survival.Rmd](essential-statistics/titanic-survival.Rmd) source
+  - source [titanic-survival.Rmd](essential-statistics/titanic-survival.Rmd)
 - ลองสร้างโมเดล linear regression ใน Excel/ Google Sheets
 - วิเคราะห์ข้อมูลด้วย AB test ง่ายๆใน Excel/ Google Sheets
 
@@ -50,14 +50,14 @@ We learn 10 sprints during 4 month program.
 ## Intro to Python
 
 - [Pao Ying Chub game](https://datalore.jetbrains.com/view/notebook/eWffNaN9SB88BfN8AqgXDj) Pao Ying Chub game with bot in `python`
-  - [pao-ying-chub.ipynb](python/pao-ying-chub.ipynb) source
+  - source [pao-ying-chub.ipynb](python/pao-ying-chub.ipynb)
 - [ATM](https://datalore.jetbrains.com/view/notebook/oZNNGtHNsp4vcBQ0b7ITID) Object Oriented Programming using ATM senario with `python`
-  - [pao-ying-chub.ipynb](python/atm.ipynb) source
+  - source [pao-ying-chub.ipynb](python/atm.ipynb)
 
 ## Essential Python for Data Analyst
 
 - [Pandas foundation homework](https://datalore.jetbrains.com/view/notebook/BKjX2MzuVpqP0uOPup47cc) Answer business questions using Pandas
-  - [Course Pandas Foundation - Final Project](python/Course%20Pandas%20Foundation%20-%20Final%20Project.ipynb)
+  - source [Course Pandas Foundation - Final Project.ipynb](python/Course%20Pandas%20Foundation%20-%20Final%20Project.ipynb)
 - ลองเขียน requests ดึงข้อมูลจาก public API
 - ลองสร้าง simple ML model ด้วย sklearn
 
