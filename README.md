@@ -63,8 +63,8 @@ We learn 10 sprints during 4 month program.
 
 ## Dashboard
 
-- ทำการบ้านในคอร์ส pandas foundation
-- ลองเขียน requests ดึงข้อมูลจาก public API
-- ลองสร้าง simple ML model ด้วย sklearn
+- สร้าง dashboard ด้วย Looker Studio (Former Data Studio)
+- สร้าง dashboard ด้วย Tableau Public
+- Free [sample datasets](https://public.tableau.com/app/resources/sample-data)
 
 Badges:
