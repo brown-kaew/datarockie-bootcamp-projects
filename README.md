@@ -63,8 +63,8 @@ We learn 10 sprints during 4 month program.
 
 ## Dashboard
 
-- สร้าง dashboard ด้วย Looker Studio (Former Data Studio)
-- สร้าง dashboard ด้วย Tableau Public
+- สร้าง dashboard ด้วย Looker Studio (Former Data Studio) [FIFA18 Report](https://lookerstudio.google.com/reporting/099f24d3-2031-42fc-b1de-61e2c21383c7)
+- สร้าง dashboard ด้วย Tableau Public [Tour de France Overview](https://public.tableau.com/app/profile/kaew.tibkham/viz/TourdeFranceOverview_16776942435060/TourdeFranceOverview)
 - Free [sample datasets](https://public.tableau.com/app/resources/sample-data)
 
 Badges:
