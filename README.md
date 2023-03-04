@@ -58,7 +58,7 @@ We learn 10 sprints during 4 month program.
 
 - [Pandas foundation homework](https://datalore.jetbrains.com/view/notebook/BKjX2MzuVpqP0uOPup47cc) Answer business questions using Pandas
   - source [Course Pandas Foundation - Final Project.ipynb](python/Course%20Pandas%20Foundation%20-%20Final%20Project.ipynb)
-- ลองเขียน requests ดึงข้อมูลจาก public API
+- [Harry potter API](python/PublicAPI_homework.ipynb) Make a request to get data from public API and build it as a dataframe
 - ลองสร้าง simple ML model ด้วย sklearn
 
 ## Dashboard
